@@ -1,0 +1,4 @@
+body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#0b0b10; color:#eaeaf2; }
+main { max-width: 900px; margin: 24px auto; padding: 0 16px 40px; }
+canvas { display:black; border-radius: 14px;}
+.journal { margin-top: 12px; line-height: 1.4; font-size: 14px; opacity: 0.9; }
