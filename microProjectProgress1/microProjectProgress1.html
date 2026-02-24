@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Micro Project - Progress 1</title>
+</head>
+<body>
+
+<h1>Micro Project - Progress 1</h1>
+
+<h2>Terms and Conditions</h2>
+<p>The design relies on the users engagement with the text. The time spent reading is tracked to determine if the user is actually reading or just skimming. The user controls the system's behavior through their reading habits. Over time if the user skims the text more text is add for them to read. If the user spends time reading the text, the user will gain acess to click on the "accept" button.</p>
+
+<h2>Primary Variable</h2>
+<p>The primary variable will be "let stage = 0;" which represents the user's current stage in the process of reading and accepting terms and conditions. The variable is changed when scrolling through the text or "reading" it, will change the stage from 0 to 1. However, quick scrolling or skimming, repeated early attempts to click the "accept" button without reading, will reset the stage back to 0. Visually at stage = 0, the user sees a warning message and a greyed out accept button. At stage = 1, the user sees the "Accept Terms and Conditions" button.</p>
+
+<h2>Base Build</h2>
+<p>The base build will include the variable "let stage = 0;" and the input of the user's scroll position inside the terms and conditions section. The first visible stage will be stage = 0, which means that the user can't accept the terms and conditions. The button will be greyed out and a warning message will be given to read the text. The state remains while the user has not scrolled to the bottom of the text or hasn't met the reading condition. In the second stage, "stage = 1;" the accept button will become visible and will change in color to show that it is now active. The user can click the button to accept the terms and conditions. If the user scrolls back up or tries to click the button without reading, the stage will reset to 0, and the process will start over.</p>
+
+<h2> Structural Growth</h2>
+<p>Over the next three weeks I will be working off the basic build. I will add thresholds and time-based behaviors so that the system responds to the how the user reads. I will track the scrolling speed and dwell time to determine if the user is skimming or actually reading. If the user scrolls too quick or tries to hit accept, I will double the amout of text to increase friction. I also plan on showing a warning message when skimming is detected, which tells the user to slow down and read. If the user scrolls at a reasonable pace and dwells on a text for a sufficent amount of time, I will add a time-based decay that removes words or lines over time. I will also add escalations to the system so that if the user continues to skip reading, they are presented with more text and more friction, but if they stick to reading the text will gradually shrink and unlock the accept button.</p>
+</body>
+</html>
