@@ -9,11 +9,29 @@
 
 <h1>Final Self-Assessment</h1>
 
-<h2>Project: Terms and Conditions</h2>
-<p>When thinking about the system I wanted to design, I thought of things people often try to avoid. I found that people often avoid reading the terms and conditions. The core rule of the system is that if the user skims the terms and conditions (without reading them), they will not be able to “accept” them. </p>
-<p>Over time, if the system detects that the user is not reading the text based on scroll speed, dwell time, and check attempts, more text will be added for the user to read. If the user doesn’t even read the text, but instead goes to accept the terms and conditions, the text will be doubled, and the accept button will be unavailable/locked. If the user just skims the text, more text will be added as the user scrolls. A warning will also pop up to not skim the text, but to read it. If the user takes the time to read the text, the text will shorten by one word per second they spend reading. Eventually, once the user finishes reading, the “Accept Terms and Conditions” button will become available. </p>
-<p>The system becomes uneven when more text is added as the user scrolls faster. It also becomes uneven when the text doubles at each attempt the user tries to click the “accept” button without reading first. </p>
-<p>This idea is worth developing because it focuses on the user's actions and choices. I hope that with this, the user may learn or build the habit of reading the terms and conditions. The system is made to make the user feel some mild guilt and lose patience. It also seems like a challenge, and I would like to challenge myself. </p>
+<h2>Terms and Conditions</h2>
+<h3>Core Rule and System Clarity - 20 pts</h3>
+<p>The core rule is that the user is not able to accept the terms and conditions unless they are reading at an acceptable pace. If the user scrolls fast to reach the end of the text, a warning would be given, but if they continue to scroll fast, then there is a penalty of 5 seconds, where the user is unable to scroll. The user must maintain a slow to medium scrolling pace (which is how the reading is detected) and reach the end of the text for the “Accept” button to turn green and clickable.</p>
+
+<h3>State Progression - 15 pts</h3>
+<p>The system moves through distinct structural states, each based on the user's interaction with the system, and each state changes what the user can do. For example, in the code, there are five clear states. 1. The Initial locked state, where the accept button is gray, prompting the user to read/scroll through the terms and conditions. 2. If the user is scrolling at a slow or medium speed (let slowThreshold = 25; let mediumThreshold = 60;) the system reads it as normal or that the user is reading the text. 3. When the user scrolls fast ( let fastThreshold = 120;), the system shows a pop-up warning, telling the user to read the terms and conditions. 4. If the user scrolls fast once again, then they face a 5-second penalty where the scrolling is frozen. 5. When the user reaches the end of the text, the system reaches an unlocked state, which causes the “Accept” button to turn green. 
+The system will have several states based on the user's interaction with the terms and conditions:</p>
+
+<h3>Interaction and Evolution - 15pts</h3>
+<p>The user’s interactions does produce meaningful consequences and evolves over time. The system reponds to what the user does. The users input changes whether scrolling continues: fast scrolling causes a warning and faster scrolling causes the user to be in a 5 second timeout. The time-out and the forced paused scrolling creates restriction as the user is restricted from scrolling. The restriction helps to prompt the user read the terms and agreement. Once the user reaches the bottom of the text, the “Accept” button become unlocked and is able to be accepted. </p>
+
+<h3>Interactive Development - 12pts</h3>
+<p>In my sketchbook entries I have provided my ideation process and my final version of the project. In my “microIdeas,” I have depicted three ideas of what my project will take focus on. One of them being the “terms and conditions” idea. The other ideas were “Priority” which takes on a fast-pass in a long line idea and “Get Heard” which focuses on communication. In my “TermsAndConditions_Ideation,” I sketch out the process in which became the foundation of how the system would operate. It depicts the consequences of the users actions, points of restrictions, and changes in the system. In “TermsAndConditions_Final,” the final version of the system is shown. However, some changes were made due the complication of the code. Instead of text being added the faster one scrolls, it was replaced with a penalty of a warning box, followed by a 5 second timeout. This made the system much cleaner in feel. I also did not make a separate copy of my progress check’s, but rather update it within the same file, so there is no early forms of the development process.</p>
+
+<h3>Documentation and Logging - 15pts</h3>
+<p>I believe my sketchbook does document code experiments, rule changes, and system adjustments. Each of my sketchbooks contains rules learned in class and development in complexity. For example, “number 1” uses mouse x and mouse y keys, and the draw function and in a later sketchbook, “number 9” use and auto-advanced mode to switch between photos, which didn’t involve user in put.</p>
+
+<h3>Risk and Experiement - 8 pts</h3>
+<p>I didn’t really puch beyond what was demonstrated in class, besides the first two sketches which involves color and some other design elements and the project which was the most challenegeing considering, I had to learn and implement new code for scroll speed detection. </p>
+
+<h3>Participation and Critique implementation - 10 pts</h3>
+<p>When it came to participation and critiquing, I was engaged with what the other students were presenting. I asked questions, gave suggestion and wrote on the spreadsheet. When I presented I took the feedback, one of which was that instead of having text be added, perhaps have a countdown timer. Which I implemented once I realize how difficult the code was to add text when fast scrolling was detected and to take it away when the user’s scrolling slowed. The critiquing was very beneficial and useful in developing my system.</p>
+
 
 </body>
 </html>
