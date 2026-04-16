@@ -2,15 +2,16 @@ let images = [];
 let currentIndex = 0;
 
 function preload() { 
-  images[0] = loadImage("../number8/img/image1.jpeg"); 
-  images[1] = loadImage("../number8/img/image2.jpeg"); 
-  images[2] = loadImage("../number8/img/image3.jpeg"); 
-  images[3] = loadImage("../number8/img/image4.jpeg"); 
-  images[4] = loadImage("../number8/img/image5.jpeg"); 
+  images[0] = loadImage(
+    "img/PrototypeW1.jpeg",
+    () => console.log("image loaded"),
+    () => console.log("failed to load image")
+  ); 
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent("sketch-holder");
   textSize(16);
   textAlign(CENTER, CENTER);
 }
@@ -28,7 +29,6 @@ function draw() {
 }
 
 function keyPressed() {
-
   if (keyCode === RIGHT_ARROW) {
     currentIndex = (currentIndex + 1) % images.length;
   }
@@ -39,7 +39,6 @@ function keyPressed() {
 }
 
 function drawImageContain(img) {
-
   let imgRatio = img.width / img.height;
   let canvasRatio = width / height;
 
@@ -60,11 +59,9 @@ function drawImageContain(img) {
 }
 
 function drawHUD() {
-
   fill(255);
   noStroke();
   text("Image " + (currentIndex + 1) + " of " + images.length, width / 2, height - 30);
-
 }
 
 function windowResized() {

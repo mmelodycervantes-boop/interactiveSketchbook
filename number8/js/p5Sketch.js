@@ -3,10 +3,6 @@ let currentIndex = 0;
 
 function preload() { 
   images[0] = loadImage("../number8/img/image1.jpeg"); 
-  images[1] = loadImage("../number8/img/image2.jpeg"); 
-  images[2] = loadImage("../number8/img/image3.jpeg"); 
-  images[3] = loadImage("../number8/img/image4.jpeg"); 
-  images[4] = loadImage("../number8/img/image5.jpeg"); 
 }
 
 function setup() {
