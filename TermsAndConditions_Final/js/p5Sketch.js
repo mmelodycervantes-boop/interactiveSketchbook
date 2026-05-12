@@ -101,19 +101,18 @@ let fastScrollSpeed = 120;
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent("sketch-holder"); 
+
   boxW = width * 0.65;
   boxH = height * 0.5;
   boxX = width / 2 - boxW / 2;
   boxY = height * 0.12;
-  textSize(16);
-  textWrap(WORD);
-  rectMode(CORNER);
 }
 
 // the heart of the system <3 Boom Boom Boom 
 function draw() {
-  background(200, 300, 255); // terms and conditions remind me of professionals so I used blue for the background to give a sense of intellegence and calmness which is different from what the system is made to make the user feel
+  background(240); // use this for a more natural and cleaner look
 
   warningAlert();
   countdown();
@@ -129,8 +128,8 @@ function draw() {
 
 
 function showTermsAndConditions() {
-  fill(255, 204, 203); // red to make the user feel anxious 
-  stroke(3);
+  fill(255);
+  stroke(180);
   rect(boxX, boxY, boxW, boxH); 
   let padding = 20;
   let contentW = boxW - padding * 2; // used margins to keep the text doesn't touch the edges of the rectangle 

@@ -1,0 +1,42 @@
+.all-links h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+ 
+.all-links a {
+    display: inline-block;
+    margin: 4px 6px 4px 0;
+    padding: 6px 14px;
+    background-color: #e0e0e0;
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.85rem;
+    border: 1px solid #aaaaaa;
+}
+ 
+.all-links a:hover {
+    background-color: #c8c8c8;
+}
+ 
+@media (max-width: 600px) {
+    html {
+        font-size: 80%;
+    }
+ 
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+ 
+    .cards {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+ 
+    .all-links {
+        padding: 0 20px 40px 20px;
+    }
+}
